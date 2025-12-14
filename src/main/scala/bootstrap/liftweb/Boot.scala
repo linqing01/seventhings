@@ -51,9 +51,11 @@ class Boot {
         content = Some(
           ContentSecurityPolicy(
             scriptSources = List(ContentSourceRestriction.UnsafeEval,
-              ContentSourceRestriction.Self),
+              ContentSourceRestriction.Self,
+              ContentSourceRestriction.UnsafeInline),
             styleSources = List(ContentSourceRestriction.UnsafeInline,
-              ContentSourceRestriction.Self)
+              ContentSourceRestriction.Self,
+              ContentSourceRestriction.UnsafeInline)
           )))
     }
   }
